@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.lillah"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "monolith",
+    "baseName": "cov001",
+    "packageName": "com.lillah",
+    "packageFolder": "com/lillah",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mssql",
+    "prodDatabaseType": "mssql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "M2NlMDE1YTNjNzE3YmU1NDY4ZjQwZGUxYjczYzE3MTNkNDhlZjFiMWUyYTU1ODljMDA1MjE1MGRhODI0MGVjN2M0ZmY5NTk3NWI0MWEwNWM2ZjhjNWU4YTQ3YzdiNjk5MWEyOWQ5NDc4NmQ1NThjYzJmNmU3ZjQyNGRiMTQ0ZjI=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "journal",
+    "clientThemeVariant": "light",
+    "creationTimestamp": 1586262467758,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}

@@ -1,0 +1,16 @@
+version: '2'
+services:
+  cov001-app:
+    image: cov001
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:sqlserver://cov001-mssql:1433;database=cov001
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  cov001-mssql:
+    extends:
+      file: mssql.yml
+      service: cov001-mssql

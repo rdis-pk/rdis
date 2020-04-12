@@ -1,0 +1,96 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="search()" [formGroup]="editForm">
+            <h2 id="jhi-person-heading">Search Person by CNIC</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cnic">CNIC</label>
+                    <input type="text" class="form-control" name="cnic" id="field_cnic"
+                           formControlName="cnic"/>
+                    <div *ngIf="editForm.get('cnic')!.invalid && (editForm.get('cnic')!.dirty || editForm.get('cnic')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cnic')?.errors?.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cnic')?.errors?.maxlength">
+                        This field cannot be longer than 13 characters.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <span>Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" class="btn btn-primary">
+                    <span>Search</span>
+                </button>
+            </div>
+
+            <div *ngIf="person">
+                <dl class="row-md jh-entity-details">
+                    <dt><span>Full Name</span></dt>
+                    <dd>
+                        <span>{{ person.fullName }}</span>
+                    </dd>
+                    <dt><span>Father Name</span></dt>
+                    <dd>
+                        <span>{{ person.fatherName }}</span>
+                    </dd>
+                    <dt><span>Husband Name</span></dt>
+                    <dd>
+                        <span>{{ person.husbandName }}</span>
+                    </dd>
+                    <dt><span>Email</span></dt>
+                    <dd>
+                        <span>{{ person.email }}</span>
+                    </dd>
+                    <dt><span>Mobile</span></dt>
+                    <dd>
+                        <span>{{ person.mobile }}</span>
+                    </dd>
+                    <dt><span>Other Contact Details</span></dt>
+                    <dd>
+                        <span>{{ person.otherContactDetails }}</span>
+                    </dd>
+                    <dt><span>Cnic</span></dt>
+                    <dd>
+                        <span>{{ person.cnic }}</span>
+                    </dd>
+                    <dt><span>Home Address</span></dt>
+                    <dd>
+                        <span>{{ person.homeAddress }}</span>
+                    </dd>
+                    <dt><span>Area</span></dt>
+                    <dd>
+                        <span>{{ person.area }}</span>
+                    </dd>
+                    <dt><span>City</span></dt>
+                    <dd>
+                        <span>{{ person.city }}</span>
+                    </dd>
+                    <dt><span>Postcode</span></dt>
+                    <dd>
+                        <span>{{ person.postcode }}</span>
+                    </dd>
+                    <dt><span>Country</span></dt>
+                    <dd>
+                        <span>{{ person.country }}</span>
+                    </dd>
+                    <dt><span>Status</span></dt>
+                    <dd>
+                        <span>{{ person.status }}</span>
+                    </dd>
+                </dl>
+            </div>
+
+        </form>
+    </div>
+</div>
